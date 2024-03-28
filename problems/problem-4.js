@@ -1,4 +1,3 @@
-
 /*
 Assignment 5: Problem 4 - Turn in the following array of arrays into a single object.
 The first element in each array is the key, and the second element is the value.
@@ -38,6 +37,18 @@ const items = [
 
 // Omit the 'age' element
 
-const person = items // append your code here
+// append your code here
+
+const person = items.reduce((prev, item, index) => {
+  if (index !== 2) {//omit index 2
+    prev[item[0]] = item[1];
+  }
+  return prev;
+}, {});
+
+console.log(person);
+
+
+
 
 test("Problem 4", person)

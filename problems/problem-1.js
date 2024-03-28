@@ -20,6 +20,8 @@ You can run this example by running `node problems/problem-1` in your terminal,
 or you can run all by running `node run-all`.
 */
 
+
+
 const { test } = require('../tester')
 
 const people = [
@@ -29,6 +31,10 @@ const people = [
 	{ firstName: 'Marie', lastName: 'Curie', age: 66 }
 ]
 
-const peopleStrings = people // append your array methods here
+const peopleStrings  = people.map(person => {
+	const fullName = `${person.firstName} ${person.lastName}`;
+	return `Name: ${fullName}, Age: ${person.age}`;
+  });
+
 
 test("Problem 1", peopleStrings)

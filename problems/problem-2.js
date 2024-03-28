@@ -1,4 +1,3 @@
-
 /*
 Assignment 5: Problem 2 - Turn the following array of strings into an array of objects.
 Each string in the array is a comma-separated list of key-value pairs.
@@ -50,5 +49,16 @@ const strings = [
 ]
 
 const jedi = strings // append your code here
+
+
+
+
+//const jediObjects = data
+.map(s => JSON.parse(`{${s}}`) )
+.filter(o => o.occupation === 'Jedi');
+
+console.log(jedi);
+
+
 
 test("Problem 2", jedi)

@@ -29,6 +29,20 @@ const isEven = number => number % 2 === 0 // returns true if the number is even
 
 const numbers = [ -10, -5, 0, 5, 10, 8, -2 ]
 
-const numberStrings = numbers // append your array methods here
+ // append your array methods here
+
+
+
+const numberStrings = numbers
+.filter(num => num > 0)
+.sort((a, b) => a - b) // Sort the array from smallest to largest
+.map(num => `${num} is ${isEven(num) ? 'even' : 'odd'}`); // Map each number to its string representation
+
+console.log(numberStrings)
+
+
+
+
+//console.log(JSON.stringify(result,null,2))
 
 test("Problem 3", numberStrings)
